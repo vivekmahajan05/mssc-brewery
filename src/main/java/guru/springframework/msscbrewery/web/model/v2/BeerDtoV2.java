@@ -1,4 +1,4 @@
-package guru.springframework.msscbrewery.web.model;
+package guru.springframework.msscbrewery.web.model.v2;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,14 +10,11 @@ import javax.validation.constraints.Null;
 import javax.validation.constraints.Positive;
 import java.util.UUID;
 
-/**
- * Created by jt on 2019-04-20.
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BeerDto {
+public class BeerDtoV2 {
 
     @Null
     private UUID id;
@@ -26,7 +23,7 @@ public class BeerDto {
     private String beerName;
 
     @NotBlank
-    private String beerStyle;
+    private BeerStyleEnum beerStyle;
 
     @Positive
     private Long upc;
