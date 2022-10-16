@@ -4,15 +4,19 @@ import guru.springframework.msscbrewery.domain.Beer;
 import guru.springframework.msscbrewery.web.model.BeerDto;
 import guru.springframework.msscbrewery.web.model.v2.BeerStyleEnum;
 import javax.annotation.processing.Generated;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-10-08T21:18:37+0530",
+    date = "2022-10-16T23:33:46+0530",
     comments = "version: 1.5.2.Final, compiler: javac, environment: Java 18.0.2 (Oracle Corporation)"
 )
+@Component
 public class BeerMapperImpl implements BeerMapper {
 
-    private final DateMapper dateMapper = new DateMapper();
+    @Autowired
+    private DateMapper dateMapper;
 
     @Override
     public BeerDto beerToBeerDto(Beer beer) {

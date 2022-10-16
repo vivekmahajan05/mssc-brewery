@@ -3,12 +3,14 @@ package guru.springframework.msscbrewery.web.mappers;
 import guru.springframework.msscbrewery.domain.Customer;
 import guru.springframework.msscbrewery.web.model.CustomerDto;
 import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-10-08T21:18:37+0530",
+    date = "2022-10-16T23:33:45+0530",
     comments = "version: 1.5.2.Final, compiler: javac, environment: Java 18.0.2 (Oracle Corporation)"
 )
+@Component
 public class CustomerMapperImpl implements CustomerMapper {
 
     @Override
